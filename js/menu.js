@@ -3,7 +3,7 @@
  */
 (function () {
     var menu = [{
-        title: 'Experience & Skills',
+        title: 'My stories',
         submenu: [{
             title: 'Knowledge Engineering',
             subtitle: 'Sands or Gold',

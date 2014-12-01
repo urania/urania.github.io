@@ -12,6 +12,9 @@
             hash = '/index';
         }
         var htmlUrl = 'html/' + hash + '.html';
+        
+        // Empty page
+        $('#main').html('');
 
         $.get(htmlUrl, function (html) {
             if (opsp[hash]) {
@@ -42,7 +45,7 @@
                 opacity: 0.6,
                 size: 4,
                 size_random: true,
-                nb: 200,
+                nb: 150,
                 line_linked: {
                     enable_auto: true,
                     distance: 120,
@@ -61,18 +64,18 @@
                 }
             },
             interactivity: {
-                enable: false,
+                enable: true,
                 mouse: {
                     distance: 300
                 },
-                detect_on: 'canvas', // "canvas" or "window"
+                detect_on: 'window', // "canvas" or "window"
                 mode: 'grab',
                 line_linked: {
                     opacity: .5
                 },
                 events: {
                     onclick: {
-                        enable: true,
+                        enable: false,
                         mode: 'push', // "push" or "remove"
                         nb: 4
                     }

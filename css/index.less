@@ -16,9 +16,11 @@ a {
     text-decoration: none;
 }
 
+@link_underline_color: #890505;
+
 a::before {
     content: "";
-    border-bottom: 1px solid #A06D20;
+    border-bottom: 1px solid @link_underline_color;
     position: absolute;
     left: 0;
     bottom: -1px;
@@ -84,6 +86,11 @@ a:hover::before {
              2px 2px 2px #fff;
         color: #555;
         font-family: Georgia,Cambria,"Times New Roman",Times,serif;
+
+        b {
+            color: #890505;
+            font-weight: normal;
+        }
     }
 }
 /** Contact page */
@@ -162,8 +169,8 @@ a:hover::before {
             text-transform: uppercase;
             font-family: 'Lato';
             font-weight: 300;
-            border-bottom: 1px solid #A06D20;
-            color: #A06D20;
+            border-bottom: 1px solid @link_underline_color;
+            color: @link_underline_color;
         }
 
         section {
@@ -284,24 +291,64 @@ a:hover::before {
     }
 }
 
+/* Knowledge Engineering*/
+#knowledge-engineering {
+    width: 800px;
+    margin: 0px auto;
+    text-align: left;
+
+    h3 {
+        font-size: 26px;
+        font-family: "jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+    }
+
+    p {
+        line-height: 24px;
+    }
+
+    .time {
+        color: #999;
+    }
+
+    section {
+        margin-bottom: 50px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    a {
+        color: @link_underline_color;
+    }
+}
+
 /** nav */
 #nav {
 
     position: fixed;
     left: 30px;
     top: 20px;
-
-    i.menu {
+    
+    i {
         width: 25px;
         height: 25px;
         display: inline-block;
         background-size: 100% 100%;
-        background-image: url(../img/menu.png);
         z-index: 1;
         cursor: pointer;
+    }
+
+    i.menu {
+        background-image: url(../img/menu.png);
+        margin-right: 20px;
+    }
+
+    i.home {
+        background-image: url(../img/logo.png);
+        width: 70px;
+        height: 27px;
     }
 }
 
 #logo {
     margin-top: 200px;
 }
+
