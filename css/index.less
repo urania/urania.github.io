@@ -1,0 +1,307 @@
+@import url(./lato.css);
+
+html {
+    height: 100%;
+}
+body {
+    margin: 0px;
+    height: 100%;
+
+    font-family: Helvetica, Arial;
+    font-weight: 100;
+}
+
+a {
+    position: relative;
+    text-decoration: none;
+}
+
+a::before {
+    content: "";
+    border-bottom: 1px solid #A06D20;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 0px;
+    color: #333;
+    -webkit-transition: width 0.5s;
+       -moz-transition: width 0.5s;
+        -ms-transition: width 0.5s;
+         -o-transition: width 0.5s;
+            transition: width 0.5s;
+}
+
+a:hover::before {
+    width: 100%;
+}
+
+/** Pace theme */
+.pace .pace-progress {
+    background: #F0A0FC;
+    position: fixed;
+    z-index: 3000;
+    top: 0;
+    left: 0;
+    height: 2px;
+
+    -webkit-transition: width 1s;
+    -moz-transition: width 1s;
+    -o-transition: width 1s;
+    transition: width 1s;
+}
+
+.pace-inactive {
+    display: none;
+}
+
+#particle-background {
+    z-index: -1;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+}
+
+#main {
+    text-align: center;
+
+    h2 {
+        text-transform: uppercase;
+        font-weight: 300;
+        font-family: 'Lato';
+    }
+}
+
+/** Index page */
+#index {
+    p.introduction {
+        font-size: 22px;
+        text-shadow:
+           -2px -2px 2px #fff,  
+            2px -2px 2px #fff,
+            -2px 2px 2px #fff,
+             2px 2px 2px #fff;
+        color: #555;
+        font-family: Georgia,Cambria,"Times New Roman",Times,serif;
+    }
+}
+/** Contact page */
+#contact {
+    text-align: left;
+    .pic {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        height: 100%;
+        width: 50%;
+
+        img {
+            height: 100%;
+            position: absolute;
+            right: 0px;
+        }
+    }
+
+    address {
+        position: absolute;
+        left: 100px;
+        top: 50%;
+        height: 400px;
+        font-style: normal;
+        margin-top: -150px;
+    }
+
+    section {
+        margin-bottom: 50px;
+    }
+    
+    p {
+        font-size: 14px;
+        text-transform: uppercase;
+        font-family: 'Lato';
+        font-weight: 300;
+        color: #A06D20;
+    }
+    
+    a {
+        color: black;
+        font-size: 18px;
+        font-family: 'Lato';
+        font-weight: 300;
+    }
+}
+
+/** Menu */
+#menu {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.97);
+    
+    text-align: center;
+    left: -2000px;
+    -webkit-transition: left 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+       -moz-transition: left 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        -ms-transition: left 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+         -o-transition: left 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            transition: left 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    
+    &.show {
+        left: 0;
+    }
+
+    nav {
+        text-align: left;
+        margin: 0 auto;
+        margin-top: 100px;
+
+        h5 {
+            text-transform: uppercase;
+            font-family: 'Lato';
+            font-weight: 300;
+            border-bottom: 1px solid #A06D20;
+            color: #A06D20;
+        }
+
+        section {
+            display: inline-block;
+            vertical-align: top;
+            // max-width: 25%;
+
+            margin: 20px;
+        }
+
+        ul {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        li {
+            list-style: none;
+            margin-bottom: 20px;
+
+            a {
+                color: black;
+                text-decoration: none;
+
+                font-family: 'Lato';
+                font-weight: 300;
+
+                position: relative;
+            }
+
+            p {
+                color: #ccc;
+                font-size: 12px;
+                color: #BDBDBD;
+                font-size: 12px;
+            }
+        }
+    }
+
+    .close {
+        width: 30px;
+        height: 30px;
+        background-image: url(../img/close.png);
+        background-size: 100% 100%;
+        position: absolute;
+        right: 60px;
+        top: 30px;
+        cursor: pointer;
+    }
+}
+
+/** My Timeline */
+#timeline {
+    text-align: left;
+    width: 800px;
+    margin: 0px auto;
+    position: relative;
+
+    article {
+    
+        section {
+            /** prevent margin collapase */
+            padding-top: 1px;
+            margin-bottom: 50px;
+        }
+
+        .timeline {
+            position: absolute;
+            left: 0px;
+            width: 1px;
+            background-color: #808080;
+            bottom: 0px;
+            top: 0px;
+        }
+        
+        @year-circle-size: 40px;
+        @circle-size: 20px;
+
+        .circle {
+            color: white;
+            width: @circle-size;
+            height: @circle-size;
+            border-radius: 100px;
+            position: absolute;
+            left: -@circle-size / 2 + 1;
+            font-size: 12px;
+            border: 2px solid white;
+            box-sizing: border-box;
+            background-color: #890505;
+        }
+    
+        .content {
+            margin-left: @year-circle-size + 10;
+        }
+
+        h5 {
+            margin: 0px;
+            font-weight: normal;
+            font-size: 18px;
+        }
+
+        p {
+            color: #868686;
+            font-size: 16px;
+        }
+
+        section.year .circle {
+            text-align: center;
+            line-height: @year-circle-size - 2;
+            width: @year-circle-size;
+            height: @year-circle-size;
+            left: -@year-circle-size / 2 + 1;
+            background-color: black;
+        }
+
+        section.year .content {
+            margin-top: @year-circle-size / 2 - 10;
+        }
+    }
+}
+
+/** nav */
+#nav {
+
+    position: fixed;
+    left: 30px;
+    top: 20px;
+
+    i.menu {
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        background-size: 100% 100%;
+        background-image: url(../img/menu.png);
+        z-index: 1;
+        cursor: pointer;
+    }
+}
+
+#logo {
+    margin-top: 200px;
+}

@@ -1,0 +1,31 @@
+<h2>My Timeline</h2>
+<div id="timeline">
+    <!--
+    <section class="brief-introduction">
+        <h3>Hello! My Name is Yuzhou.</h3>
+        <p>I'm a graduate student in Computer Science, currently living in Beijing, China.</p>
+        <p>I love the piano, the colour purple and the inspiration from all sorts of people.</p>
+        <p>"We are drowning in information, but starved for knowledge."</p>
+        <p>To maximumly use computer power to optimize the way we dealing with human knowledge is the most intriguing thing in my life.</p>
+    </section>
+    -->
+    <article>
+        <div class="timeline"></div>
+        <!-- for: ${timeline} as ${item} -->
+        <!-- if: Math.round(${item.year}) == ${item.year} -->
+        <section class="year">
+            <div class="circle">${item.year}</div>
+        <!-- else: -->
+        <section>
+            <div class="circle"></div>
+        <!-- /if -->
+            <div class="content">
+                <h5>${item.title}</h5>
+                <!-- if: ${item.subtitle} -->
+                <p>${item.subtitle}</p>
+                <!-- /if -->
+            </div>
+        </section>
+        <!-- /for -->
+    </article>
+</div>

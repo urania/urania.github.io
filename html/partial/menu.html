@@ -1,0 +1,16 @@
+<nav>
+    <!-- for: ${menu} as ${item} -->
+    <section>
+        <h5>${item.title}</h5>
+        <ul>
+            <!-- for: ${item.submenu} as ${submenu} -->
+            <li>
+                <a href="${submenu.href}">${submenu.title}</a>
+                <p>${submenu.subtitle}</p>
+            </li>
+            <!-- /for -->
+        </ul>
+    </section>
+    <!-- /for -->
+</nav>
+<div class="close"></div>
