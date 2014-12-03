@@ -30,7 +30,10 @@
                 itemStyle: {
                     normal: {
                         label: {
-                            show: true
+                            show: true,
+                            textStyle: {
+                                fontFamily: 'Helvetica, Arial'
+                            }
                         },
                         nodeStyle: {
                             borderWidth: 0
@@ -113,7 +116,10 @@
 
                     {name: 'Piano', category: 0},
 
-                    {name: 'College of Information Science', category: 2},
+                    {
+                        name: 'College of Information Science', category: 2,
+                        label: 'College of\nInformation\nScience'
+                    },
                     {name: 'Baidu', category: 2},
                     {name: 'Korea-China Youth Association', category: 2},
                     {name: 'BLCU', category: 2},
@@ -125,7 +131,10 @@
                     {name: 'Chinese Musicians Association', category: 2},
                     {name: 'PSafe', category: 2},
                     {name: 'Qihoo 360', category: 2},
-                    {name: 'Polytechnic Institute of Leiria', category: 2},
+                    {
+                        name: 'Polytechnic Institute of Leiria', category: 2,
+                        label: 'Polytechnic\nInstitute\nof Leiria\n(PIL)'
+                    },
 
                     {name: 'Robin Li', category: 3, label: 'Robin Li'},
 
