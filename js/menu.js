@@ -49,7 +49,7 @@
         }, {
             title: 'Me in Knowlege Graph',
             subtitle: 'Being A Knot in This World',
-            href: '#/me-in-knowledge-graph'
+            href: '#/me-in-kg'
         }, {
             title: 'Resume',
             subtitle: 'Read Or Download',

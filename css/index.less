@@ -88,7 +88,7 @@ a:hover::before {
         font-family: Georgia,Cambria,"Times New Roman",Times,serif;
 
         b {
-            color: #890505;
+            // color: #890505;
             font-weight: normal;
         }
     }
@@ -205,6 +205,7 @@ a:hover::before {
                 font-size: 12px;
                 color: #BDBDBD;
                 font-size: 12px;
+                margin: 5px 0px;
             }
         }
     }
@@ -292,7 +293,8 @@ a:hover::before {
 }
 
 /* Knowledge Engineering*/
-#knowledge-engineering {
+#knowledge-engineering,
+#search-engine {
     width: 800px;
     margin: 0px auto;
     text-align: left;
@@ -304,10 +306,13 @@ a:hover::before {
 
     p {
         line-height: 24px;
+        font-size: 16px;
     }
 
     .time {
         color: #999;
+        font-family: 'Lato';
+        font-weight: 300;
     }
 
     section {
@@ -317,7 +322,29 @@ a:hover::before {
 
     a {
         color: @link_underline_color;
+        font-weight: normal;
+        font-style: italic;
     }
+}
+
+/** me in kg */
+#me-in-kg {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    background-image: url(../img/dark_mosaic.png);
+}
+
+#me-in-kg-bg,
+#me-in-kg-graph {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 /** nav */
