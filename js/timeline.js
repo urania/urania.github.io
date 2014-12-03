@@ -62,7 +62,7 @@
         subtitle: 'As project manager'
     }];
 
-    opsp['/timeline'] = function ($el, html) {
+    opsp['timeline'] = function ($el, html) {
         $el.html(etpl.compile(html)({
             timeline: data
         }));

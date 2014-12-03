@@ -4,7 +4,9 @@
 
     window.opsp = window.opsp || {};
 
-    opsp['/me-in-kg'] = function ($el, html) {
+    var particleEffect;
+
+    opsp['me-in-kg'] = function ($el, html) {
 
         $el.html(html);
 
@@ -202,12 +204,13 @@
                 node.label = node.name.replace(/\s/g, '\n');
             }
             node.value = node.name.length;
+            node.initial = [Math.random() * 1000, Math.random() * 1000];
         }
 
         chart.setOption(option);
 
 
-        particlesJS('me-in-kg-bg', {
+        particleEffect = particlesJS('me-in-kg-bg', {
             particles: {
                 color: '#506CBF',
                 shape: 'circle', // "circle", "edge" or "triangle"
@@ -254,8 +257,4 @@
             retina_detect: true
         });
     };
-
-    opsp['/me-in-kg'].destroy = function () {
-
-    }
 }) ();

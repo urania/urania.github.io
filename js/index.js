@@ -2,6 +2,7 @@
 
     window.opsp = window.opsp || {};
 
+    var lastPage = '';
     /*****************************************
      * Load html on hash change
      *****************************************/
@@ -11,14 +12,25 @@
         if (!hash || hash === '/') {
             hash = '/index';
         }
-        var htmlUrl = 'html/' + hash + '.html';
+        var hashArr = hash.split('/');
+        var page = hashArr[1];
+        var anchor = hashArr[2];
+
+        var htmlUrl = 'html/' + page + '.html';
         
         // Empty page
         $('#main').html('');
+        if (lastPage) {
+            if (opsp[page] && opsp[page].destroy) {
+                opsp[page].destroy();
+            }
+        }
+        $(document.body).removeClass(lastPage).addClass(page);
+        lastPage = page;
 
         $.get(htmlUrl, function (html) {
-            if (opsp[hash]) {
-                opsp[hash]($('#main'), html);
+            if (opsp[page]) {
+                opsp[page]($('#main'), html);
             } else {
                 // Default handler
                 $('#main').html(html);
@@ -35,7 +47,7 @@
     /**
      * Index Particle effects
      */
-    opsp['/index'] = function ($el, html) {
+    opsp['index'] = function ($el, html) {
         $el.html(etpl.compile(html)({}));
 
         particlesJS('particle-background', {
@@ -68,7 +80,7 @@
                 mouse: {
                     distance: 300
                 },
-                detect_on: 'window', // "canvas" or "window"
+                detect_on: 'canvas', // "canvas" or "window"
                 mode: 'grab',
                 line_linked: {
                     opacity: .5

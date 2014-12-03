@@ -22,23 +22,23 @@
         submenu: [{
             title: 'Sesame Street E-learning Products',
             subtitle: 'Educational Platform & Apps',
-            href: '#/sesame-street-e-learning'
+            href: '#/project/sesame-street-e-learning'
         }, {
             title: 'Personalized KMS',
             subtitle: 'Software ·  Internet Entities Extraction & Process',
-            href: '#/personalized-kms'
+            href: '#/project/personalized-kms'
         }, {
             title: 'Visualized KG Search',
             subtitle: 'Search Engine Feature · Knowledge Computing',
-            href: '#/visualized-kg-search'
+            href: '#/project/visualized-kg-search'
         }, {
             title: 'Samemail',
             subtitle: 'Online Service · Mailing Website & Product',
-            href: '#/samemail'
+            href: '#/project/visualized-kg-search'
         }, {
             title: 'CAS Validator',
             subtitle: 'Software · XBRLTaxnomy Validation',
-            href: '#/cas-validator'
+            href: '#/project/cas-validator'
         }]
     }, {
         title: 'About',
