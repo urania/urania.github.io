@@ -56,7 +56,7 @@
                     name: 'Interests & Hobbies',
                     itemStyle: {
                         normal: {
-                            color: '#0067A6'
+                            color: '#BF1542'
                         }
                     }
                 }, {
@@ -136,7 +136,7 @@
                     {name: 'Qihoo 360', category: 2},
                     {
                         name: 'Polytechnic Institute of Leiria', category: 2,
-                        label: 'Polytechnic\nInstitute\nof Leiria\n(PIL)'
+                        label: 'Polytechnic\nInstitute\nof Leiria\n(IPL)'
                     },
 
                     {name: 'Robin Li', category: 3, label: 'Robin Li'},
