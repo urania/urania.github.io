@@ -29,6 +29,7 @@
                 maxRadius: 50,
                 scaling: 2.5,
                 roam: true,
+                draggable: false,
                 itemStyle: {
                     normal: {
                         label: {
