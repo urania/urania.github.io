@@ -34,7 +34,7 @@
         }, {
             title: 'Samemail',
             subtitle: 'Online Service · Mailing Website & Product',
-            href: '#/project/visualized-kg-search'
+            href: '#/project/samemail'
         }, {
             title: 'CAS Validator',
             subtitle: 'Software · XBRLTaxnomy Validation',

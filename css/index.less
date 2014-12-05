@@ -299,7 +299,8 @@ a:hover::before {
 /* Knowledge Engineering*/
 #knowledge-engineering,
 #search-engine,
-#languages {
+#languages,
+#resume {
     width: 900px;
     margin: 0px auto;
     text-align: left;
@@ -338,6 +339,60 @@ a:hover::before {
         color: @link_underline_color;
         font-weight: normal;
         font-style: italic;
+    }
+}
+
+/** resume */
+#resume {
+    position: relative;
+
+    h2 {
+        text-align: center;
+        color: #888
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    li>i {
+        color: #999;
+    }
+
+    .education {
+        .subtitle {
+            margin-bottom: 10px;
+        }
+        .subtitle:first-child {
+            color: #111
+        }
+    }
+
+    .skills-and-certifications,
+    .honors-and-awards {
+        h3 {
+            font-size: 18px;
+        }
+        h4 {
+            font-family: "jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+            margin: 0px 0px 5px 0px;
+            font-weight: normal;
+        }
+        .subtitle {
+            margin-bottom: 20px;
+        }
+    }
+
+    .skills-and-certifications {
+        border-bottom: none;
+    }
+
+    .download {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+
+        font-style: normal;
     }
 }
 

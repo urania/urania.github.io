@@ -257,5 +257,13 @@
             /* Retina Display Support */
             retina_detect: true
         });
+
+        window.addEventListener('resize', function () {
+            chart.resize();
+        });
     };
+    
+    opsp['me-in-kg'].destroy = function () {
+        window.removeEventListener('resize');
+    }
 }) ();
